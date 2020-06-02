@@ -1,4 +1,4 @@
-# Die Vier ????: Proof of concept
+# Die Vier ????: Proof of Concept
 Made with Kinect 360 and Unity3D
 Shows that we can track a person, recognize gestures and attach an object to a specific point of the user
 
