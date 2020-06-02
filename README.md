@@ -1,4 +1,4 @@
-# DieVierFragezeichen_ProofOfConcept
+# Die Vier ???? Proo of concept
 Made with Kinect 360 and Unity3D
 Shows that we can track a person, recognize gestures and attach an object to a specific point of the user
 
