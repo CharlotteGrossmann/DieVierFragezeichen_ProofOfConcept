@@ -1,3 +1,7 @@
+/*
+	Only changed gesture and deleted/changed some corresponding values
+ */
+
 using UnityEngine;
 using System.Collections;
 using System;
@@ -7,19 +11,15 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
 	// GUI Text to display the gesture messages.
 	public GUIText GestureInfo;
 	
-	private bool swipeLeft; //raiseLeftHand
-	private bool swipeRight; //raiseRightHand
+	private bool squat; 
 	
-	
-
-	
-	public bool IsSwipeRight() //IsRaiseRightHand
+	public bool IsSquat() 
 	{
 		
-		if (swipeRight) //raiseRightHand
+		if (squat)
 		{
-			print("IsSwipeRight");
-			swipeRight = false; //raiseRightHand
+			print("IsSquat");
+			squat = false; 
             return true;
 		}
 		
@@ -36,7 +36,7 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
 
 		if(GestureInfo != null)
 		{
-			GestureInfo.GetComponent<GUIText>().text = "Raise left or right hand to change the slides.";
+			GestureInfo.GetComponent<GUIText>().text = "Squat to pick up basket";
 		}
 	}
 	
@@ -52,7 +52,6 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
 	public void GestureInProgress(uint userId, int userIndex, KinectGestures.Gestures gesture, 
 	                              float progress, KinectWrapper.NuiSkeletonPositionIndex joint, Vector3 screenPos)
 	{
-		print("GestureInProgress");
 		// don't do anything here
 	}
 
@@ -67,7 +66,7 @@ public class GestureListener : MonoBehaviour, KinectGestures.GestureListenerInte
 		}
 		
 		if(gesture == KinectGestures.Gestures.Squat)
-			swipeRight = true;
+			squat = true;
 			
 	
 

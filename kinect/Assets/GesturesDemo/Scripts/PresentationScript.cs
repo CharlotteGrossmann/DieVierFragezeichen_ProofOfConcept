@@ -6,12 +6,12 @@ public class PresentationScript : MonoBehaviour
 {
   
 	public float smoothFactor = 5f;
-	public bool autoChangeAlfterDelay = false;
-	public float slideChangeAfterDelay = 10;
+	//public bool autoChangeAlfterDelay = false;
+	//public float slideChangeAfterDelay = 10;
 	public KinectWrapper.NuiSkeletonPositionIndex TrackedJoint = KinectWrapper.NuiSkeletonPositionIndex.HandRight;
-	public List<Texture> slideTextures;
+	//public List<Texture> slideTextures;
 	public GUIText debugText;
-	public List<GameObject> horizontalSides;
+	//public List<GameObject> horizontalSides;
 
 	private float distanceToCamera = 10f;
 	public GUITexture backgroundImage;
@@ -24,9 +24,8 @@ public class PresentationScript : MonoBehaviour
 
 	void Start() 
 	{
+		OverlayObject.active = false; //basket is invisible
 
-		
-		OverlayObject.active = false;
 		// get the gestures listener
 		gestureListener = Camera.main.GetComponent<GestureListener>();
 	}
@@ -38,14 +37,17 @@ public class PresentationScript : MonoBehaviour
 		// dont run Update() if there is no user
 		KinectManager kinectManager = KinectManager.Instance;
 
+		//(copied from example: Overlay)
 		if (backgroundImage && (backgroundImage.texture == null))
 		{
 			backgroundImage.texture = manager.GetUsersClrTex();
 		}
 
-		if ( gestureListener)
+
+
+		if ( gestureListener) 
 		{
-			if ( gestureListener.IsSwipeRight())
+			if ( gestureListener.IsSquat()) //if user squats basket will stick to hand/release from hand
 			{
 				print(basket);
                 if (!basket)
@@ -63,6 +65,7 @@ public class PresentationScript : MonoBehaviour
 		}
 
 
+		//tracks right Hand (copied from example: Overlay)
 		int iJointIndex = (int)TrackedJoint;
 
 		uint user1Id = manager.GetPlayer1ID();

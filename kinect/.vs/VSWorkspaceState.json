@@ -4,9 +4,7 @@
     "\\Assets",
     "\\Assets\\GesturesDemo",
     "\\Assets\\GesturesDemo\\Scripts",
-    "\\Assets\\KinectScripts",
-    "\\Assets\\OverlayDemo",
-    "\\Assets\\OverlayDemo\\Scripts"
+    "\\Assets\\KinectScripts"
   ],
   "SelectedNode": "\\Assets\\GesturesDemo\\Scripts\\PresentationScript.cs",
   "PreviewInSolutionExplorer": false
