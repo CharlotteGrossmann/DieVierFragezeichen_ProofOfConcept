@@ -6,12 +6,8 @@ public class PresentationScript : MonoBehaviour
 {
   
 	public float smoothFactor = 5f;
-	//public bool autoChangeAlfterDelay = false;
-	//public float slideChangeAfterDelay = 10;
 	public KinectWrapper.NuiSkeletonPositionIndex TrackedJoint = KinectWrapper.NuiSkeletonPositionIndex.HandRight;
-	//public List<Texture> slideTextures;
 	public GUIText debugText;
-	//public List<GameObject> horizontalSides;
 
 	private float distanceToCamera = 10f;
 	public GUITexture backgroundImage;

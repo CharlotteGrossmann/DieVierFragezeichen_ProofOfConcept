@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 317972370}
   - component: {fileID: 317972369}
   m_Layer: 0
-  m_Name: GreenBall
+  m_Name: Basket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -735,12 +735,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothFactor: 5
-  autoChangeAlfterDelay: 0
-  slideChangeAfterDelay: 10
   TrackedJoint: 11
-  slideTextures: []
   debugText: {fileID: 0}
-  horizontalSides: []
   backgroundImage: {fileID: 0}
   OverlayObject: {fileID: 0}
 --- !u!1 &1518493331
@@ -1232,12 +1228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothFactor: 100
-  autoChangeAlfterDelay: 0
-  slideChangeAfterDelay: 10
   TrackedJoint: 11
-  slideTextures: []
   debugText: {fileID: 0}
-  horizontalSides: []
   backgroundImage: {fileID: 544348587}
   OverlayObject: {fileID: 317972368}
 --- !u!1 &1910737567
